@@ -1,2 +1,7 @@
 ---
 # tasks file for emorylib_redis-load_from_s3
+- name: Include tasks to download from S3
+  include_tasks:
+    file: download-from-s3.yml
+  vars:
+    s3: '{{ redis_load.s3 | d () }}'
