@@ -21,3 +21,7 @@
     {{ download_path }}
   vars:
     get_trailing_slash: \/$
+
+- name: Set fact for bucket_key_path
+  set_fact:
+    bucket_key_path: '{{ download_path }}/{{ bucket_key }}'
