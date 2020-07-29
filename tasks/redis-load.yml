@@ -1,0 +1,2 @@
+- name: Run redis-load command via template
+  shell: '{{ lookup("template", "redis-load_command.j2") }}'
